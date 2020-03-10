@@ -1,0 +1,41 @@
+<view class="log_shadow" bindtap='_hide' hidden="{{flag}}"></view>
+<view class="log_container" hidden="{{flag}}">
+  <view class="menu">
+    <text class="{{dataType=='log'?'active':''}}" data-type="log" bindtap="_switchType">log</text>
+    <text class="{{dataType=='req'?'active':''}}" data-type="req" bindtap="_switchType">request</text>
+  </view>
+  <view class="mentCont">
+    <view class="cont" wx:if="{{dataType === 'log'}}">
+      <view class="logItem" wx:for="{{log}}" wx:key="index" data-item="{{item}}">
+        <text class="li_title">{{item.title}}：</text>
+        <text class="li_intro">{{item.cont}}</text>
+      </view>
+    </view>
+    <view class="cont reqCont" wx:if="{{dataType === 'req'}}">
+      <view class="logItem" wx:for="{{fetch}}" wx:key="index" data-item="{{item}}">
+        <view class="fields">
+          <text class="fi_tt">状态：</text><text selectable='true' class="url {{item.status}}">{{item.status}}</text>
+        </view>
+        <view class="fields">
+          <text class="fi_tt">请求url：</text><text selectable='true' class="url">{{item.url}}</text>
+        </view>
+        <view class="fields code params">
+          <text class="fi_tt">请求params：</text><text selectable='true' class="params">{{item.params}}</text>
+        </view>
+        <view class="fields code">
+          <text class="fi_tt">请求res：</text><text selectable='true' class="res">{{item.res}}</text>
+        </view>
+        <view class="fields">
+          <text class="fi_tt">请求时间：</text><text class="date">{{item.date}}</text>
+        </view>
+        <view class="fields">
+          <text class="fi_tt">所在模块：</text><text selectable='true' class="currentRoute">{{item.currentRoute}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="toolBar">
+    <text class="clear" bindtap='_clear'>Clear</text>
+    <text class="hide" bindtap='_hide'>Hide</text>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<!-- pages/webview/index.wxml -->
+<view class="showConsole" bindtap="showPopup"></view>
+<epConsole id='epConsole'></epConsole>

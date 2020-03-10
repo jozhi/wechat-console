@@ -1,0 +1,19 @@
+.
+├── readme.md       // 
+├── tree.txt        // 目录结构
+└── wechat
+    ├── app.js      // 微信小程序中需要初始化的参数，以及公共变量在此处声明。
+    ├── app.json    // 路由配置
+    ├── app.wxss
+    ├── img         // 图片资源文件夹
+    ├── pages
+    │   ├── webview
+    ├── project.config.json     // 项目配置文件
+    ├── sitemap.json
+    └── utils
+        ├── http.js
+        ├── md5.js
+        ├── util.js
+        └── verify.js
+
+29 directories, 147 files

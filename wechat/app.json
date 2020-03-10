@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/webview/index"
+  ],
+  "usingComponents": {
+    "epConsole": "./components/console/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请确认授权"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
